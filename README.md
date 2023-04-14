@@ -1,41 +1,21 @@
-# Data Visualization: F1 World Championship (1950-2023)
+# Pacman AI - Q-Learning Agent
 
-This repository contains a data visualization project that explores the history and statistics of Formula 1 World Championship from its inception in 1950 up to 2023.
+This project is a reinforcement learning agent that uses Q-Learning algorithm to play Pacman, based on the Pacman AI project developed by UC Berkeley. This code implements a Q-learning algorithm to train an agent to play the Pacman game. The QLearnAgent class contains hyperparameters such as the learning rate, exploration rate, and discount factor. The agent selects actions using an epsilon-greedy exploration strategy and updates its Q-values based on rewards and observed next states. The GameStateFeatures class extracts information about the current game state. 
 
-## Project Overview
+## Prerequisites
 
-The main objective of this project is to provide insights into the world of Formula 1 by visualizing various aspects of the championship, such as:
-
-- Championship standings
-- Team and driver performance
-- Race results and statistics
-- Impacts of starting position on race results
-- Home advantage
-
-## Data Sources
-
-The data used in this project is sourced from multiple reliable sources, including:
-
-- [Ergast Developer API](https://ergast.com/mrd/)
-- Formula 1 official website
-- Historical archives and websites
-
-Please note that the data may be subject to changes and updates over time.
-
-## Requirements
-
-To run the project, you will need the following software and libraries:
-
-- Python 3.x
-- Jupyter Notebook (or any other notebook environment)
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Plotly (optional)
+- Python 3.7 or higher
+- Pygame
+- Numpy
 
 ## Usage
+To run the Pacman game with the Q-Learning agent, navigate to the pacman_utils directory and run:
+```
+python pacman.py -p QLearnAgent -x 2000 -n 2010 -l smallGrid
+```
+-p QLearnAgent: specifies the agent to be used.
+-x 2000: sets the number of training episodes.
+-n 2010: sets the number of testing episodes.
+-l smallGrid: specifies the layout of the game.
 
-1. Clone the repository to your local machine.
-2. Install the required libraries using `pip install -r requirements.txt` or via your preferred package manager.
-3. Open the Jupyter Notebook `Data_Visualisation_F1_World_Championship_1950-2023.ipynb` and run the cells to generate the visualizations.
+You can also adjust the hyperparameters of the Q-Learning agent by modifying the `QLearnAgent` class in the `mlLearningAgents.py` file. Following the usage instructions will train the PACMAN to consistently win games in a 5x5 grid.
